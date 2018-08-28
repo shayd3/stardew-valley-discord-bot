@@ -31,6 +31,7 @@ async def on_message(message):
 
         await client.edit_message(tmp, 'You have {} messages.'.format(counter))
     elif message.content.startswith('!hi'):
-        await client.send_message(message.channel, 'Hi there, ${message.author}')
+        resp = 'Hi there, ', message.author
+        await client.send_message(message.channel, resp)
 
-client.run('token')
+client.run('')
